@@ -5,7 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "lint": "eslint .",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -19,7 +24,14 @@
   },
   "homepage": "https://github.com/pinsfuki/cours-notes-api#readme",
   "dependencies": {
+    "@eslint/js": "^10.0.1",
     "express": "^5.2.1",
+    "globals": "^17.3.0",
     "marked": "^17.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.2",
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2"
   }
 }
